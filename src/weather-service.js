@@ -6,7 +6,7 @@ export class BikeService {
 	async getBikeByManufacturer(manufacturer, location) {
 		try {
 			let response = await fetch(
-				`https://bikeindex.org:443/api/v3/search/count?&manufacturer=${manufacturer}&location=${location}&distance=10&stolenness=stolen&access_token= 1VdUfjrvxjFEdED6cdXn2_btBVq96BcJ3SOd7-0IuDQ`
+				`https://bikeindex.org:443/api/v3/search/count?&manufacturer=${manufacturer}&location=${location}&distance=10&stolenness=stolen&access_token= 1VdUfjrvxjFEdED6cdXn2_btBVq96BcJ3SOd7-0IuDQ`, { mode: 'no-cors'}
 			);
 			let jsonifiedResponse;
 			if (response.ok && response.status == 200) {
